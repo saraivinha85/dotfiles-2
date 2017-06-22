@@ -1,0 +1,52 @@
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=45
+markup=none
+
+[empty]
+command=echo " "
+interval=once
+
+[user]
+label= 
+command=uname -n
+interval=once
+
+[iface]
+label= 
+interval=30
+color=#BBFF33
+
+[volume]
+label= 
+instance=Master
+interval=once
+signal=1
+color=#33BBFF
+
+[brightness]
+label= 
+command=cat "/sys/class/backlight/radeon_bl0/brightness"
+interval=once
+signal=2
+color=#33BBFF
+
+[battery]
+label= 
+command=acpi | grep -Eo "[[:digit:]]+%"
+interval=15
+color=#BBFF33
+
+[memory]
+label= 
+interval=25
+color=#BBFF33
+
+[date]
+label= 
+command=date "+%d. %m. %Y"
+interval=270
+
+[time]
+label= 
+command=date "+%H:%M:%S "
+interval=5
