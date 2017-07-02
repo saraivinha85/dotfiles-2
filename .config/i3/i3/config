@@ -1,0 +1,170 @@
+set $mod Mod4
+set $term 1
+set $code 2
+set $web 3
+set $mail 4
+set $image 5
+set $chat 6
+set $music 7
+
+# Font
+font pango:Source Sans Pro Semibold 11
+
+# Dragging windows
+floating_modifier $mod
+
+# Terminal
+bindsym $mod+Return exec --no-startup-id st -f "Source Code Pro-10"
+
+# Kill focused window
+bindsym $mod+q kill
+
+# Dmenu
+bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 30 -fn "Source Sans Pro Semibold-12" -nb "#333335" -nf "#CDCCCC" -sb "#666668" -sf "#CDCCCC"
+
+# Focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Split
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# Default workspace
+exec --no-startup-id i3-msg "workspace $term"
+
+# Switch workspace
+bindsym $mod+1 workspace number $term
+bindsym $mod+2 workspace number $code
+bindsym $mod+3 workspace number $web
+bindsym $mod+4 workspace number $mail
+bindsym $mod+5 workspace number $image
+bindsym $mod+6 workspace number $chat
+bindsym $mod+7 workspace number $music
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+
+# Move windows
+bindsym $mod+Shift+1 move container to workspace number $term
+bindsym $mod+Shift+2 move container to workspace number $code
+bindsym $mod+Shift+3 move container to workspace number $web
+bindsym $mod+Shift+4 move container to workspace number $mail
+bindsym $mod+Shift+5 move container to workspace number $image
+bindsym $mod+Shift+6 move container to workspace number $chat
+bindsym $mod+Shift+7 move container to workspace number $music
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+# Reload, restart, exit
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
+
+# Resize
+mode "Resize" {
+        bindsym Left resize shrink width 5 px
+        bindsym Down resize grow height 5 px
+        bindsym Up resize shrink height 5 px
+        bindsym Right resize grow width 5 px
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "Resize"
+
+# Top bar
+bar {
+	id 0
+	status_command i3blocks
+	position top
+	colors {
+		background #333335
+		focused_workspace #333335 #666668 #CDCCCC
+		inactive_workspace #333335 #333335 #9A9999
+		urgent_workspace #666668 #333335 #CDCCCC
+		separator #9A9999
+	}
+	font pango:Source Sans Pro Semibold 12
+	separator_symbol ""
+	height 30
+	tray_output none
+	binding_mode_indicator no
+	strip_workspace_numbers yes
+}
+
+# Bottom bar
+bar {
+	id 1
+	mode hide
+	position bottom
+	colors {
+		background #333335
+		focused_workspace #333335 #666668 #CDCCCC
+		inactive_workspace #333335 #333335 #9A9999
+		urgent_workspace #666668 #333335 #CDCCCC
+		separator #9A9999
+	}
+	font pango:Source Sans Pro Semibold 12
+	height 35
+	tray_output primary
+	tray_padding 3
+	workspace_buttons no
+	modifier None
+}
+bindsym $mod+t exec --no-startup-id i3-msg "bar mode toggle 1"
+
+# Screenshot
+bindsym Print exec --no-startup-id scrot /tmp/screen.png -q 100 && xclip -i /tmp/screen.png -t image/png -selection CLIPBOARD && rm /tmp/screen.png && notify-send -t 1 "Screenshot taken"
+bindsym Shift+Print exec --no-startup-id scrot ~/Images/screenshot.png -q 100 && notify-send -t 1 "Screenshot saved"
+
+# Wallpaper
+exec_always --no-startup-id ~/Scripts/random_wallpaper.sh
+
+# Audio
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
+
+# Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo ~/Scripts/brightness.sh 10 && pkill -RTMIN+2 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo ~/Scripts/brightness.sh -10 && pkill -RTMIN+2 i3blocks
+
+# Colors
+client.focused				#999999 #333335 #CDCCCC #666666 #999999
+client.focused_inactive			#666666 #333335 #CDCCCC #666666 #666666
+client.unfocused			#666666 #333335 #CDCCCC #666666 #666666
+client.urgent				#666666 #333335 #CDCCCC #666666 #666666
+client.background			#333335
+
+# Workspace assignments
+assign [class="Atom"] $code
+assign [class="Firefox"] $web
+assign [class="Thunderbird"] $mail
+assign [class="Gimp"] $image
+assign [class="discord"] $chat
+assign [class="Spotify"] $music
+
+# Disable title bars
+new_window normal 1
+for_window [class="^.*"] border pixel 1
+
+# Compositon manager
+exec_always --no-startup-id compton -b
+
+# Gaps
+gaps inner 15
+gaps outer 0
