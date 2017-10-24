@@ -13,7 +13,7 @@ interval=once
 
 [iface]
 label= 
-interval=30
+interval=15
 color=#BBFF33
 
 [volume]
@@ -48,5 +48,5 @@ interval=270
 
 [time]
 label= 
-command=date "+%H:%M:%S "
+command=date "+%H:%M   "
 interval=5
