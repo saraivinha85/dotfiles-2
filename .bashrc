@@ -16,3 +16,5 @@ then
 	echo "$WEATHER"
 	echo
 fi
+
+eval $(thefuck --alias)
