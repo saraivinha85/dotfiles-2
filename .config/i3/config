@@ -20,7 +20,7 @@ bindsym $mod+Return exec --no-startup-id st -f "Source Code Variable-10"
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 30 -fn "Source Sans Pro Semibold-12" -nb "#333335" -nf "#CDCCCC" -sb "#666668" -sf "#CDCCCC"
+bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 30 -fn "Source Sans Pro Semibold-12" -nb "#333335" -nf "#CDCCCC" -sb "#666668" -sf "#CDCCCC" -p "Run:"
 
 # Focus
 bindsym $mod+Left focus left
@@ -143,7 +143,7 @@ new_window pixel 0
 for_window [class="^.*"] border pixel 0
 
 # Compositon manager
-exec_always --no-startup-id compton -b
+exec --no-startup-id compton -b
 
 # Gaps
 gaps inner 15

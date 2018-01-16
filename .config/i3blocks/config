@@ -39,4 +39,4 @@ interval=270
 [time]
 label= 
 command=date "+%H:%M   "
-interval=5
+interval=30
