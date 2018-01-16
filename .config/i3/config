@@ -2,7 +2,7 @@ set $mod Mod4
 set $term 1
 set $code 2
 set $web 3
-set $mail 4
+set $mail 4
 set $image 5
 set $chat 6
 set $music 7
@@ -14,7 +14,7 @@ font pango:Source Sans Pro Semibold 11
 floating_modifier $mod
 
 # Terminal
-bindsym $mod+Return exec --no-startup-id st -f "Source Code Pro-10"
+bindsym $mod+Return exec --no-startup-id st -f "Source Code Variable-10"
 
 # Kill focused window
 bindsym $mod+q kill
@@ -101,35 +101,15 @@ bar {
 	font pango:Source Sans Pro Semibold 12
 	separator_symbol ""
 	height 30
-	tray_output none
+	tray_output primary
 	binding_mode_indicator no
 	strip_workspace_numbers yes
+	output primary
 }
-
-# Bottom bar
-bar {
-	id 1
-	mode hide
-	position bottom
-	colors {
-		background #333335
-		focused_workspace #333335 #666668 #CDCCCC
-		inactive_workspace #333335 #333335 #9A9999
-		urgent_workspace #666668 #333335 #CDCCCC
-		separator #9A9999
-	}
-	font pango:Source Sans Pro Semibold 12
-	height 35
-	tray_output primary
-	tray_padding 3
-	workspace_buttons no
-	modifier None
-}
-bindsym $mod+t exec --no-startup-id i3-msg "bar mode toggle 1"
 
 # Screenshot
-bindsym Print exec --no-startup-id scrot /tmp/screen.png -q 100 && xclip -i /tmp/screen.png -t image/png -selection CLIPBOARD && rm /tmp/screen.png && notify-send -t 1 "Screenshot taken"
-bindsym Shift+Print exec --no-startup-id scrot ~/Images/screenshot.png -q 100 && notify-send -t 1 "Screenshot saved"
+bindsym Print exec --no-startup-id scrot /tmp/screen.png -q 100 && xclip -i /tmp/screen.png -t image/png -selection CLIPBOARD && rm /tmp/screen.png && notify-send "Screenshot taken"
+bindsym Shift+Print exec --no-startup-id scrot ~/Images/screenshot.png -q 100 && notify-send "Screenshot saved"
 
 # Wallpaper
 exec_always --no-startup-id ~/Scripts/random_wallpaper.sh
@@ -156,11 +136,11 @@ assign [class="Firefox"] $web
 assign [class="Thunderbird"] $mail
 assign [class="Gimp"] $image
 assign [class="discord"] $chat
-assign [class="Spotify"] $music
+assign [class="spotify"] $music
 
 # Disable title bars
-new_window normal 1
-for_window [class="^.*"] border pixel 1
+new_window pixel 0
+for_window [class="^.*"] border pixel 0
 
 # Compositon manager
 exec_always --no-startup-id compton -b

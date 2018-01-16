@@ -11,14 +11,9 @@ label=
 command=uname -n
 interval=once
 
-[iface]
-label= 
-interval=15
-color=#BBFF33
-
 [volume]
 label= 
-instance=Master
+command=/home/sogomn/Scripts/get_volume.sh
 interval=once
 signal=1
 color=#33BBFF
@@ -34,11 +29,6 @@ color=#33BBFF
 label= 
 command=acpi | grep -Eo "[[:digit:]]+%"
 interval=15
-color=#BBFF33
-
-[memory]
-label= 
-interval=25
 color=#BBFF33
 
 [date]
