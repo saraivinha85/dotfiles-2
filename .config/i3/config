@@ -1,4 +1,5 @@
 set $mod Mod4
+set $mod2 Mod3
 set $term 1
 set $code 2
 set $web 3
@@ -78,18 +79,19 @@ bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 
 # Resize
 mode "Resize" {
-        bindsym Left resize shrink width 5 px
-        bindsym Down resize grow height 5 px
-        bindsym Up resize shrink height 5 px
-        bindsym Right resize grow width 5 px
-        bindsym Escape mode "default"
+  bindsym Left resize shrink width 5 px
+  bindsym Down resize grow height 5 px
+  bindsym Up resize shrink height 5 px
+  bindsym Right resize grow width 5 px
+  bindsym Escape mode "default"
 }
 bindsym $mod+r mode "Resize"
 
 # Top bar
 bar {
-	id 0
+  id 0
 	status_command i3blocks
+	mode dock
 	position top
 	colors {
 		background #333335
@@ -101,10 +103,32 @@ bar {
 	font pango:Source Sans Pro Semibold 12
 	separator_symbol ""
 	height 30
-	tray_output primary
+	tray_output none
 	binding_mode_indicator no
 	strip_workspace_numbers yes
 	output primary
+}
+
+# Bottom bar
+bar {
+	id 1
+	position bottom
+	mode hide
+	colors {
+		background #333335
+		focused_workspace #333335 #666668 #CDCCCC
+		inactive_workspace #333335 #333335 #9A9999
+		urgent_workspace #666668 #333335 #CDCCCC
+		separator #9A9999
+	}
+	font pango:Source Sans Pro Semibold 12
+	height 35
+	tray_output primary
+	tray_padding 3
+	binding_mode_indicator yes
+	workspace_buttons no
+	output primary
+	modifier $mod2
 }
 
 # Screenshot

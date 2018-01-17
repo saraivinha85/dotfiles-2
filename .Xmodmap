@@ -1,0 +1,7 @@
+clear Mod1
+clear Mod2
+clear Mod3
+clear Mod4
+add Mod3 = Menu
+add Mod4 = Super_L Super_R Hyper_L
+keysym Menu = Hyper_L
