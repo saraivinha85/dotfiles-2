@@ -20,4 +20,3 @@ then
 	echo
 fi
 
-eval $(thefuck --alias)

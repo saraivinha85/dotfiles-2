@@ -8,8 +8,13 @@ interval=once
 
 [user]
 label= 
-command=uname -n
+command=echo $USER
 interval=once
+
+[wireless]
+label=
+command=/home/sogomn/Scripts/get_wifi.sh
+interval=10
 
 [volume]
 label= 
@@ -27,16 +32,15 @@ color=#33BBFF
 
 [battery]
 label= 
-command=acpi | grep -Eo "[[:digit:]]+%"
+command=/home/sogomn/Scripts/get_battery.sh
 interval=15
-color=#BBFF33
 
 [date]
 label= 
 command=date "+%d. %m. %Y"
-interval=270
+interval=300
 
 [time]
 label= 
 command=date "+%H:%M   "
-interval=30
+interval=60
