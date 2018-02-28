@@ -11,7 +11,7 @@ alias ls="ls --color=auto"
 export EDITOR=vim
 export VISUAL=vim
 
-WEATHER=$(~/Scripts/weather.sh)
+WEATHER=$(~/Scripts/get_weather.sh)
 
 if [ ! -z "$WEATHER" ]
 then

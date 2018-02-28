@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SIGNAL=$(sudo cat /proc/net/wireless | tail -n 1 | awk '{print $3+0}')
 
 if [ "$SIGNAL" -ne 0 ]

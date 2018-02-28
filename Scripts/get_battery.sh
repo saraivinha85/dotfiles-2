@@ -1,3 +1,5 @@
+#!/bin/bash
+
 BATTERY=$(acpi | awk '{print $4+0}')
 
 echo "${BATTERY}%"
