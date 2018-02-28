@@ -25,7 +25,7 @@ color=#33BBFF
 
 [brightness]
 label= 
-command=cat "/sys/class/backlight/radeon_bl0/brightness"
+command=light -r
 interval=once
 signal=2
 color=#33BBFF

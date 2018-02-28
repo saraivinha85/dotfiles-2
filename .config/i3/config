@@ -144,8 +144,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% &&
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
 
 # Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo ~/Scripts/brightness.sh 10 && pkill -RTMIN+2 i3blocks
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo ~/Scripts/brightness.sh -10 && pkill -RTMIN+2 i3blocks
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 -r && pkill -RTMIN+2 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5 -r && pkill -RTMIN+2 i3blocks
 
 # Colors
 client.focused				#999999 #333335 #CDCCCC #666666 #999999
