@@ -6,10 +6,10 @@ markup=none
 command=echo " "
 interval=once
 
-[song]
-label=
-command=/home/sogomn/Scripts/get_spotify_song.sh
-interval=5
+#[song]
+#label=
+#command=/home/sogomn/Scripts/get_spotify_song.sh
+#interval=5
 
 [user]
 label= 

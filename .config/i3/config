@@ -15,7 +15,7 @@ font pango:Source Sans Pro Semibold 11
 floating_modifier $mod
 
 # Terminal
-bindsym $mod+Return exec --no-startup-id st -f "Source Code Variable-10"
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # Kill focused window
 bindsym $mod+q kill
