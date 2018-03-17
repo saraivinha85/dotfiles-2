@@ -7,9 +7,13 @@ set $mail 4
 set $image 5
 set $chat 6
 set $music 7
+set $dark #333333
+set $darker #555555
+set $brighter #888888
+set $bright #cccccc
 
 # Font
-font pango:Source Sans Pro Semibold 10
+font pango:Source Sans Pro Semibold 12
 
 # Dragging windows
 floating_modifier $mod
@@ -21,7 +25,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 35 -fn "Source Sans Pro Semibold-10" -nb "#333335" -nf "#CDCCCC" -sb "#666668" -sf "#CDCCCC" -p "Run:"
+bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 30 -fn "Source Sans Pro Semibold-12" -nb "$dark" -nf "$bright" -sb "$darker" -sf "$bright" -p "Run:"
 
 # Focus
 bindsym $mod+Left focus left
@@ -90,15 +94,15 @@ bar {
 	mode dock
 	position top
 	colors {
-		background #333335
-		focused_workspace #333335 #666668 #CDCCCC
-		inactive_workspace #333335 #333335 #9A9999
-		urgent_workspace #666668 #333335 #CDCCCC
-		separator #9A9999
+		background $dark
+		focused_workspace $dark $darker $bright
+		inactive_workspace $dark $dark $brighter
+		urgent_workspace $darker $dark $brighter
+		separator $bright
 	}
-	font pango:Source Sans Pro Semibold 10
+	font pango:Source Sans Pro Semibold 12
 	separator_symbol ""
-	height 35
+	height 30
 	tray_output none
 	binding_mode_indicator no
 	strip_workspace_numbers yes
@@ -110,13 +114,13 @@ bar {
 	position bottom
 	mode hide
 	colors {
-		background #333335
-		focused_workspace #333335 #666668 #CDCCCC
-		inactive_workspace #333335 #333335 #9A9999
-		urgent_workspace #666668 #333335 #CDCCCC
-		separator #9A9999
+		background $dark
+		focused_workspace $dark $darker $bright
+		inactive_workspace $dark $dark $brighter
+		urgent_workspace $darker $dark $brighter
+		separator $bright
 	}
-	font pango:Source Sans Pro Semibold 10
+	font pango:Source Sans Pro Semibold 12
 	height 35
 	tray_output primary
 	tray_padding 3
@@ -142,11 +146,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% &&
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
 
 # Colors
-client.focused				#999999 #333335 #CDCCCC #666666 #999999
-client.focused_inactive			#666666 #333335 #CDCCCC #666666 #666666
-client.unfocused			#666666 #333335 #CDCCCC #666666 #666666
-client.urgent				#666666 #333335 #CDCCCC #666666 #666666
-client.background			#333335
+client.focused $brighter $dark $bright $darker $brighter
+client.focused_inactive $darker $dark $bright $darker $darker
+client.unfocused $darker $dark $bright $darker $darker
+client.urgent $darker $dark $bright $darker $darker
+client.background $dark
 
 # Workspace assignments
 assign [class="Atom"] $code
@@ -158,7 +162,7 @@ assign [class="Spotify"] $music
 
 # Disable title bars
 new_window pixel 0
-for_window [class="^.*"] border pixel 0
+for_window [class=".*"] border pixel 0
 
 # Compositon manager
 exec --no-startup-id compton -b
