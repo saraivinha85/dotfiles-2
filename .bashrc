@@ -4,7 +4,7 @@
 
 [[ $- != *i* ]] && return
 
-PS1="[\A \W]\$ "
+PS1="\W - \$ "
 
 alias ls="ls --color=auto"
 

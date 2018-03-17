@@ -6,6 +6,7 @@ mkdir .config
 cp ~/.bashrc .
 cp ~/.bash_profile .
 cp ~/.Xmodmap .
+cp ~/.xinitrc .
 cp ~/.config/compton.conf .config/
 
 cp -r ~/.config/feh .config/

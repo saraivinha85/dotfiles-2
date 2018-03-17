@@ -164,9 +164,6 @@ assign [class="Spotify"] $music
 new_window pixel 0
 for_window [class=".*"] border pixel 0
 
-# Compositon manager
-exec --no-startup-id compton -b
-
 # Gaps
 gaps inner 15
 gaps outer 0
