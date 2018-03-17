@@ -5,11 +5,11 @@ set $code 2
 set $web 3
 set $mail 4
 set $image 5
-set $chat 6
+set $chat 6
 set $music 7
 
 # Font
-font pango:Source Sans Pro Semibold 11
+font pango:Source Sans Pro Semibold 10
 
 # Dragging windows
 floating_modifier $mod
@@ -21,7 +21,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 30 -fn "Source Sans Pro Semibold-12" -nb "#333335" -nf "#CDCCCC" -sb "#666668" -sf "#CDCCCC" -p "Run:"
+bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 45 -fn "Source Sans Pro Semibold-10" -nb "#333335" -nf "#CDCCCC" -sb "#666668" -sf "#CDCCCC" -p "Run:"
 
 # Focus
 bindsym $mod+Left focus left
@@ -48,17 +48,14 @@ bindsym $mod+space floating toggle
 # Default workspace
 exec --no-startup-id i3-msg "workspace $term"
 
-# Marking containers
-bindsym $mod+m mark --toggle persistent
-
 # Switch workspace
-bindsym $mod+1 workspace number $term;[con_mark="persistent"] move container to workspace number $term
-bindsym $mod+2 workspace number $code;[con_mark="persistent"] move container to workspace number $code
-bindsym $mod+3 workspace number $web;[con_mark="persistent"] move container to workspace number $web
-bindsym $mod+4 workspace number $mail;[con_mark="persistent"] move container to workspace number $mail
-bindsym $mod+5 workspace number $image;[con_mark="persistent"] move container to workspace number $image
-bindsym $mod+6 workspace number $chat;[con_mark="persistent"] move container to workspace number $chat
-bindsym $mod+7 workspace number $music;[con_mark="persistent"] move container to workspace number $music
+bindsym $mod+1 workspace number $term;[floating] move container to workspace number $term
+bindsym $mod+2 workspace number $code;[floating] move container to workspace number $code
+bindsym $mod+3 workspace number $web;[floating] move container to workspace number $web
+bindsym $mod+4 workspace number $mail;[floating] move container to workspace number $mail
+bindsym $mod+5 workspace number $image;[floating] move container to workspace number $image
+bindsym $mod+6 workspace number $chat;[floating] move container to workspace number $chat
+bindsym $mod+7 workspace number $music;[floating] move container to workspace number $music
 
 # Move windows
 bindsym $mod+Shift+1 move container to workspace number $term
@@ -70,7 +67,6 @@ bindsym $mod+Shift+6 move container to workspace number $chat
 bindsym $mod+Shift+7 move container to workspace number $music
 
 # Reload, restart, exit
-bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 
@@ -97,13 +93,12 @@ bar {
 		urgent_workspace #666668 #333335 #CDCCCC
 		separator #9A9999
 	}
-	font pango:Source Sans Pro Semibold 12
+	font pango:Source Sans Pro Semibold 10
 	separator_symbol ""
-	height 30
+	height 45
 	tray_output none
 	binding_mode_indicator no
 	strip_workspace_numbers yes
-	output primary
 }
 
 # Bottom bar
@@ -118,13 +113,12 @@ bar {
 		urgent_workspace #666668 #333335 #CDCCCC
 		separator #9A9999
 	}
-	font pango:Source Sans Pro Semibold 12
+	font pango:Source Sans Pro Semibold 10
 	height 35
 	tray_output primary
 	tray_padding 3
 	binding_mode_indicator yes
 	workspace_buttons no
-	output primary
 	modifier $mod2
 }
 
@@ -136,13 +130,9 @@ bindsym Shift+Print exec --no-startup-id scrot ~/Images/screenshot.png -q 100 &&
 exec_always --no-startup-id ~/Scripts/random_wallpaper.sh
 
 # Audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
-
-# Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5 -r && pkill -RTMIN+2 i3blocks
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo light -U 5 -r && pkill -RTMIN+2 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+1 i3blocks
 
 # Colors
 client.focused				#999999 #333335 #CDCCCC #666666 #999999
@@ -166,9 +156,9 @@ for_window [class="^.*"] border pixel 0
 # Compositon manager
 exec --no-startup-id compton -b
 
+# F.lux
+exec --no-startup-id xflux -l 51 -g 9
+
 # Gaps
 gaps inner 15
 gaps outer 0
-
-# Window focusing
-focus_on_window_activation none

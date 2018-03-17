@@ -16,10 +16,10 @@ label=
 command=echo $USER
 interval=once
 
-[wireless]
-label=
-command=/home/sogomn/Scripts/get_wifi.sh
-interval=10
+#[wireless]
+#label=
+#command=/home/sogomn/Scripts/get_wifi.sh
+#interval=10
 
 [volume]
 label= 
@@ -28,17 +28,17 @@ interval=once
 signal=1
 color=#33BBFF
 
-[brightness]
-label= 
-command=light -r
-interval=once
-signal=2
-color=#33BBFF
+#[brightness]
+#label= 
+#command=light -r
+#interval=once
+#signal=2
+#color=#33BBFF
 
-[battery]
-label= 
-command=/home/sogomn/Scripts/get_battery.sh
-interval=15
+#[battery]
+#label= 
+#command=/home/sogomn/Scripts/get_battery.sh
+#interval=15
 
 [date]
 label= 
