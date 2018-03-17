@@ -7,10 +7,10 @@ set $mail 4
 set $image 5
 set $chat 6
 set $music 7
-set $dark #333333cc
-set $darker #555555cc
-set $brighter #888888cc
-set $bright #cfcfcfcc
+set $dark #333333
+set $darker #555555
+set $brighter #888888
+set $bright #cfcfcf
 
 # Font
 font pango:Source Sans Pro Semibold 12
@@ -90,7 +90,6 @@ bindsym $mod+r mode "Resize"
 # Top bar
 bar {
 	id 0
-	i3bar_command i3bar -t
 	status_command i3blocks
 	mode dock
 	position top
