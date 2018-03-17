@@ -132,10 +132,14 @@ bindsym Shift+Print exec --no-startup-id scrot ~/Images/screenshot.png -q 100 &&
 # Wallpaper
 exec_always --no-startup-id ~/Scripts/random_wallpaper.sh
 
+# Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -Ar 5 && pkill -RTMIN+2 i3blocks
+bindsym XF86MonBrightnessDown exec --no-startup-id light -Ur 5 && pkill -RTMIN+2 i3blocks
+
 # Audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && pkill -RTMIN+1 i3blocks
 
 # Colors
 client.focused				#999999 #333335 #CDCCCC #666666 #999999
