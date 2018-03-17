@@ -4,6 +4,7 @@ rm -r Scripts
 mkdir .config
 
 cp ~/.bashrc .
+cp ~/.bash_profile .
 cp ~/.Xmodmap .
 cp ~/.config/compton.conf .config/
 
