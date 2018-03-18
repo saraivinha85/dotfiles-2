@@ -8,9 +8,9 @@ set $image 5
 set $chat 6
 set $music 7
 set $dark #333333
-set $darker #555555
-set $brighter #888888
-set $bright #cfcfcf
+set $darker #666666
+set $brighter #aaaaaa
+set $bright #eeeeee
 
 # Font
 font pango:Source Sans Pro Semibold 12
@@ -32,6 +32,9 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
+
+# No focus wrapping
+focus_wrapping no
 
 # Move
 bindsym $mod+Shift+Left move left
