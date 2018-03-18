@@ -1,0 +1,54 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#_customizing_keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+"body":
+	"ctrl-n": "tree-view:add-file"
+	"ctrl-shift-n": "tree-view:add-folder"
+	"ctrl-shift-s": "window:save-all"
+	"ctrl-shift-pageup": "pane:move-item-left"
+	"ctrl-shift-pagedown": "pane:move-item-right"
+	"ctrl-g": "tree-view:toggle-focus"
+	"ctrl-shift-t": "platformio-ide-terminal:toggle"
+	"ctrl-shift-p": "command-palette:toggle"
+	"ctrl-w": "core:close"
+	"ctrl-t": "fuzzy-finder:toggle-file-finder"
+
+"atom-text-editor":
+	"ctrl-7": "editor:toggle-line-comments"
+	"ctrl-space": "autocomplete-plus:activate"
+	"alt-up": "editor:move-line-up"
+	"alt-down": "editor:move-line-down"
+	"ctrl-l": "go-to-line:toggle"
+	"ctrl-up": "ctrl-dir-scroll:scroll-up"
+	"ctrl-down": "ctrl-dir-scroll:scroll-down"
+	"ctrl-f": "find-and-replace:toggle"

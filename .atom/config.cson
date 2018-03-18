@@ -1,0 +1,94 @@
+"*":
+  "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnType: false
+    "atom-ide-datatip":
+      datatipDebounceDelay: 10000
+    use: {}
+  "atom-language-rust":
+    colors: {}
+  "atom-package-deps":
+    ignored: []
+  "autocomplete-java": {}
+  "autocomplete-plus":
+    confirmCompletion: "enter"
+    enableAutoActivation: false
+    suggestionListFollows: "Cursor"
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "{}"
+    ]
+    wrapSelectionsInBrackets: false
+  build:
+    saveOnBuild: true
+    stealFocus: false
+  "build-cargo":
+    extCommands:
+      cargoCheck: true
+    jsonErrorFormat: false
+  core:
+    allowPendingPaneItems: false
+    disabledPackages: [
+      "wrap-guide"
+      "metrics"
+      "spell-check"
+      "welcome"
+      "autoflow"
+      "background-tips"
+      "github"
+      "image-view"
+      "open-on-github"
+      "bookmarks"
+    ]
+    excludeVcsIgnoredPaths: false
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "autocomplete-plus"
+      "bracket-matcher"
+    ]
+    projectHome: "D:\\Entwicklung\\Atom\\"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+    uriHandlerRegistration: "always"
+    warnOnLargeFileLimit: 50
+  "disable-keybindings":
+    allBundledPackages: true
+    allCommunityPackages: true
+  docblockr: {}
+  editor:
+    atomicSoftTabs: false
+    fontFamily: "Source Code Variable"
+    fontSize: 15
+    nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_ "
+    preferredLineLength: 100000000000000000
+    scrollPastEnd: true
+    scrollSensitivity: 50
+    showIndentGuide: true
+    softTabs: false
+    tabLength: 4
+    tabType: "hard"
+    zoomFontWhenCtrlScrolling: false
+  "exception-reporting":
+    userId: "624e1dfa-15b0-4591-b26b-0a7e9cfb8903"
+  "file-icons": {}
+  "fuzzy-finder":
+    searchAllPanes: true
+  "markdown-preview": {}
+  minimap: {}
+  "one-dark-ui":
+    tabSizing: "Even"
+  tabs:
+    addNewTabsAtEnd: true
+    enableMruTabSwitching: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    ignoreWhitespaceOnlyLines: true
+    removeTrailingWhitespace: false
+".rust.source":
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "{}"
+    ]

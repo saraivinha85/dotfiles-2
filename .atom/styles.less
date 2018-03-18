@@ -1,0 +1,26 @@
+body {
+	transform: scaleX(1.0000001);
+}
+
+.tab-bar {
+	font-size: 10pt;
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+}
+
+.tree-view {
+	font-size: 10pt;
+	font-family: "Trebuchet MS";
+	font-weight: bold;
+}
+
+atom-text-editor {
+	&[with-minimap] .vertical-scrollbar {
+		opacity: 0;
+		width: 0px;
+	}
+	
+	atom-text-editor-minimap .minimap-visible-area::after {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+}
