@@ -6,7 +6,7 @@
 
 PS1="\W \$ "
 
-alias ls="ls --color=auto"
+alias ls="els --els-icons=fontawesome"
 
 export EDITOR=vim
 export VISUAL=vim

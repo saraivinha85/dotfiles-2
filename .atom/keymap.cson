@@ -38,7 +38,6 @@
 	"ctrl-shift-pageup": "pane:move-item-left"
 	"ctrl-shift-pagedown": "pane:move-item-right"
 	"ctrl-g": "tree-view:toggle-focus"
-	"ctrl-shift-t": "platformio-ide-terminal:toggle"
 	"ctrl-shift-p": "command-palette:toggle"
 	"ctrl-w": "core:close"
 	"ctrl-t": "fuzzy-finder:toggle-file-finder"
@@ -52,3 +51,4 @@
 	"ctrl-up": "ctrl-dir-scroll:scroll-up"
 	"ctrl-down": "ctrl-dir-scroll:scroll-down"
 	"ctrl-f": "find-and-replace:toggle"
+	"ctrl-d": "find-and-replace:select-next"

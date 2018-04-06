@@ -60,7 +60,7 @@
   docblockr: {}
   editor:
     atomicSoftTabs: false
-    fontFamily: "Source Code Variable"
+    fontFamily: "Source Code Pro"
     fontSize: 15
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_ "
     preferredLineLength: 100000000000000000
@@ -84,7 +84,6 @@
     addNewTabsAtEnd: true
     enableMruTabSwitching: false
   whitespace:
-    ensureSingleTrailingNewline: false
     ignoreWhitespaceOnlyLines: true
     removeTrailingWhitespace: false
 ".rust.source":
