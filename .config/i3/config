@@ -93,17 +93,18 @@ bindsym $mod+r mode "Resize"
 # Top bar
 bar {
 	id 0
+	i3bar_command i3bar -t
 	status_command i3blocks
 	mode dock
 	position top
 	colors {
-		background $dark
-		focused_workspace $dark $darker $bright
-		inactive_workspace $dark $dark $brighter
-		urgent_workspace $darker $dark $brighter
+		background $dark00
+		focused_workspace $dark00 $darker00 $bright
+		inactive_workspace $dark00 $dark00 $brighter
+		urgent_workspace $darker00 $dark00 $brighter
 		separator $bright
 	}
-	font pango:Source Sans Pro Semibold 12
+	font pango:Source Sans Pro Semibold 13
 	separator_symbol ""
 	height 50
 	tray_output none
@@ -117,13 +118,8 @@ bar {
 	position bottom
 	mode hide
 	colors {
-		background $dark
-		focused_workspace $dark $darker $bright
-		inactive_workspace $dark $dark $brighter
-		urgent_workspace $darker $dark $brighter
-		separator $bright
+		background $darker
 	}
-	font pango:Source Sans Pro Semibold 12
 	height 35
 	tray_output primary
 	tray_padding 3
@@ -148,12 +144,12 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +5% &&
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+1 i3blocks
 
-# Colors
-client.focused $brighter $dark $bright $darker $brighter
-client.focused_inactive $darker $dark $bright $darker $darker
-client.unfocused $darker $dark $bright $darker $darker
-client.urgent $darker $dark $bright $darker $darker
-client.background $dark
+# Colors (Border, Background, Text, Indicator, Child border)
+client.focused			$bright $dark $bright $dark $bright
+client.focused_inactive		$brighter $dark $bright $dark $brighter
+client.unfocused		$darker $dark $bright $dark $darker
+client.urgent			$darker $dark $bright $dark $darker
+client.background		$dark
 
 # Workspace assignments
 assign [class="Atom"] $code
@@ -164,9 +160,8 @@ assign [class="discord"] $chat
 assign [class="Spotify"] $music
 
 # Disable title bars
-new_window pixel 0
-for_window [class=".*"] border pixel 0
+default_border pixel 1
 
 # Gaps
 gaps inner 15
-gaps outer 0
+gaps outer -10
