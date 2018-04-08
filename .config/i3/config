@@ -173,3 +173,6 @@ gaps outer -10
 
 # Blue light filter
 exec --no-startup-id redshift -l 52.520008:13.404954
+
+# Cronjobs
+exec --no-startup-id tinycron "* */30 * * * * *" "~/Scripts/random_wallpaper.sh"
