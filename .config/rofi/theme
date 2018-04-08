@@ -1,0 +1,54 @@
+* {
+	spacing: 3px;
+	selected-background: #333333aa;
+	background-color: transparent;
+	font: "Source Sans Pro 20";
+	text-color: #dddddd;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+window {
+	transparency: "real";
+	background-color: #000000aa;
+	padding: 5px 20px;
+}
+
+mainbox {
+	children: [inputbar, listview];
+	spacing: 25px;
+}
+
+inputbar {
+	children: [prompt, textbox-prompt-colon, entry];
+	padding: 10px 0;
+	border: 0 0 1px 0;
+	border-color: @text-color;
+}
+
+prompt {
+	font: "Source Sans Pro 25";
+}
+
+textbox-prompt-colon {
+	expand: false;
+	margin: 0 1ch 0 0;
+}
+
+entry {
+	font: "Source Sans Pro 25";
+}
+
+listview {
+	scrollbar: false;
+}
+
+element {
+	padding: 10px;
+	background-color: transparent;
+}
+
+element selected {
+	background-color: @selected-background;
+}

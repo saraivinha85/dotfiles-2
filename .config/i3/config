@@ -28,7 +28,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -lh $bar_height -fn "Source Sans Pro Semibold-$font_size" -nb "$dark" -nf "$bright" -sb "$darker" -sf "$bright" -p "Run:"
+bindsym $mod+d exec --no-startup-id rofi -config .config/rofi/config -show run
 
 # Focus
 bindsym $mod+Left focus left
