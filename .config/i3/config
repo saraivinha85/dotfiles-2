@@ -11,9 +11,12 @@ set $dark #333333
 set $darker #666666
 set $brighter #aaaaaa
 set $bright #eeeeee
+set $bar_height 50
+set $font_size 12
+set $bar_color #000000aa
 
 # Font
-font pango:Source Sans Pro Semibold 12
+font pango:Source Sans Pro Semibold $font_size
 
 # Dragging windows
 floating_modifier $mod
@@ -25,7 +28,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -lh 50 -fn "Source Sans Pro Semibold-12" -nb "$dark" -nf "$bright" -sb "$darker" -sf "$bright" -p "Run:"
+bindsym $mod+d exec --no-startup-id dmenu_run -i -lh $bar_height -fn "Source Sans Pro Semibold-$font_size" -nb "$dark" -nf "$bright" -sb "$darker" -sf "$bright" -p "Run:"
 
 # Focus
 bindsym $mod+Left focus left
@@ -98,15 +101,15 @@ bar {
 	mode dock
 	position top
 	colors {
-		background $dark00
-		focused_workspace $dark00 $darker00 $bright
-		inactive_workspace $dark00 $dark00 $brighter
-		urgent_workspace $darker00 $dark00 $brighter
+		background $bar_color
+		focused_workspace $bar_color $bar_color $bright
+		inactive_workspace $bar_color $bar_color $brighter
+		urgent_workspace $bar_color $bar_color $brighter
 		separator $bright
 	}
-	font pango:Source Sans Pro Semibold 13
+	font pango:Source Sans Pro Semibold $font_size
 	separator_symbol ""
-	height 50
+	height $bar_height
 	tray_output none
 	binding_mode_indicator no
 	strip_workspace_numbers yes
@@ -115,10 +118,11 @@ bar {
 # Bottom bar
 bar {
 	id 1
+	i3bar_command i3bar -t
 	position bottom
 	mode hide
 	colors {
-		background $darker
+		background #000000aa
 	}
 	height 35
 	tray_output primary
@@ -159,9 +163,13 @@ assign [class="Gimp"] $image
 assign [class="discord"] $chat
 assign [class="Spotify"] $music
 
-# Disable title bars
+# Borders
 default_border pixel 1
+smart_borders on
 
 # Gaps
 gaps inner 15
 gaps outer -10
+
+# Blue light filter
+exec --no-startup-id redshift -l 52.520008:13.404954
