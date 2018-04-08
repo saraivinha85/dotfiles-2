@@ -68,7 +68,7 @@
     scrollSensitivity: 50
     showIndentGuide: true
     softTabs: false
-    tabLength: 4
+    tabLength: 8
     tabType: "hard"
     zoomFontWhenCtrlScrolling: false
   "exception-reporting":
