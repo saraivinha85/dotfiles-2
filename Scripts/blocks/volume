@@ -1,0 +1,10 @@
+#!/bin/bash
+INFO=$(amixer -D pulse get Master | tail -n 1)
+MUTED=$(echo $INFO | awk '{print $6}')
+
+if [ "$MUTED" == "[on]" ]
+then
+	echo $INFO | awk '{print $5}' | tr -d []
+else
+	echo "Muted"
+fi

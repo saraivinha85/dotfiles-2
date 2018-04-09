@@ -177,6 +177,3 @@ gaps outer 0
 
 # Blue light filter
 exec --no-startup-id redshift -l 52.520008:13.404954
-
-# Cronjobs
-exec --no-startup-id tinycron "1 */30 * * * * *" "/home/sogomn/Scripts/random_wallpaper.sh"

@@ -7,7 +7,7 @@ interval=once
 
 #[song]
 #label=
-#command=/home/sogomn/Scripts/get_spotify_song.sh
+#command=~/Scripts/blocks/spotify
 #interval=5
 
 [user]
@@ -17,12 +17,12 @@ interval=once
 
 #[wireless]
 #label=
-#command=/home/sogomn/Scripts/get_wifi.sh
+#command=~/Scripts/blocks/wifi
 #interval=10
 
 [volume]
 label= 
-command=/home/sogomn/Scripts/get_volume.sh
+command=~/Scripts/blocks/volume
 interval=once
 signal=1
 color=#33BBFF
@@ -36,13 +36,13 @@ color=#33BBFF
 
 #[battery]
 #label= 
-#command=/home/sogomn/Scripts/get_battery.sh
+#command=~/Scripts/blocks/battery
 #interval=15
 
 [date]
 label= 
 command=date "+%d. %m. %Y"
-interval=300
+interval=600
 
 [time]
 label= 
