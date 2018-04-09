@@ -58,7 +58,7 @@ bindsym $mod+space floating toggle
 # Default workspace
 exec --no-startup-id i3-msg "workspace $term"
 
-# Marking containers
+# Marking containers as sticky
 bindsym $mod+m sticky toggle
 
 # Switch workspace
@@ -177,4 +177,4 @@ gaps outer -10
 exec --no-startup-id redshift -l 52.520008:13.404954
 
 # Cronjobs
-exec --no-startup-id tinycron "* */30 * * * * *" "sh ~/Scripts/random_wallpaper.sh"
+exec --no-startup-id tinycron "* */30 * * * * *" "/home/sogomn/Scripts/random_wallpaper.sh"

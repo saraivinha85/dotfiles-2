@@ -12,7 +12,7 @@
 window {
 	transparency: "real";
 	background-color: #000000aa;
-	padding: 5px 20px;
+	padding: 15px 20px;
 }
 
 mainbox {
@@ -22,7 +22,7 @@ mainbox {
 
 inputbar {
 	children: [prompt, textbox-prompt-colon, entry];
-	padding: 10px 0;
+	padding: 5px 0;
 	border: 0 0 1px 0;
 	border-color: @text-color;
 }

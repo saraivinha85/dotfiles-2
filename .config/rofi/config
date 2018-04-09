@@ -1,25 +1,25 @@
 ! "Enabled modi" Set from: Default
- rofi.modi:                           run
+rofi.modi:                           run
 ! "Window width" Set from: Default
- rofi.width:                          750
+rofi.width:                          750
 ! "Number of lines" Set from: Default
- rofi.lines:                          10
+rofi.lines:                          10
 ! "Number of columns" Set from: Default
- rofi.columns:                        1
+rofi.columns:                        1
 ! "Font to use" Set from: Default
- rofi.font:                           Source Sans Pro 18
+rofi.font:                           Source Sans Pro 20
 ! "Border width" Set from: Default
- rofi.bw:                             0
+rofi.bw:                             0
 ! "Location on screen" Set from: Default
- rofi.location:                       0
+rofi.location:                       0
 ! "Padding" Set from: Default
- rofi.padding:                        10
+rofi.padding:                        10
 ! "Y-offset relative to location" Set from: Default
 ! rofi.yoffset:                        0
 ! "X-offset relative to location" Set from: Default
 ! rofi.xoffset:                        0
 ! "Always show number of lines" Set from: Default
- rofi.fixed-num-lines:                true
+rofi.fixed-num-lines:                true
 ! "Whether to load and show icons" Set from: Default
 ! rofi.show-icons:                     false
 ! "Terminal to use" Set from: Default
@@ -55,7 +55,7 @@
 ! "Enable sidebar-mode" Set from: Default
 ! rofi.sidebar-mode:                   false
 ! "Row height (in chars)" Set from: Default
- rofi.eh:                             1
+rofi.eh:                             1
 ! "Enable auto select mode" Set from: Default
 ! rofi.auto-select:                    false
 ! "Parse hosts file for ssh mode" Set from: Default
@@ -65,7 +65,7 @@
 ! "Set the modi to combine in combi mode" Set from: Default
 ! rofi.combi-modi:                     window,run
 ! "Set the matching algorithm. (normal, regex, glob, fuzzy)" Set from: Default
- rofi.matching:                       fuzzy
+rofi.matching:                       normal
 ! "Tokenize input string" Set from: Default
 ! rofi.tokenize:                       true
 ! "Monitor id to show on" Set from: Default
@@ -81,7 +81,7 @@
 ! "Hide scroll-bar *DEPRECATED*" Set from: Default
 ! rofi.hide-scrollbar:                 true
 ! "Fullscreen" Set from: Default
- rofi.fullscreen:                     false
+rofi.fullscreen:                     false
 ! "Fake transparency *DEPRECATED*" Set from: Default
 ! rofi.fake-transparency:              false
 ! "DPI" Set from: Default
@@ -97,11 +97,11 @@
 ! "Window Format. w (desktop name), t (title), n (name), r (role), c (class) *DEPRECATED*" Set from: Default
 ! rofi.window-format:                  {w}    {i}{c}   {t}
 ! "Click outside the window to exit" Set from: Default
- rofi.click-to-exit:                  false
+rofi.click-to-exit:                  false
 ! "Indicate how it match by underlining it." Set from: Default
- rofi.show-match:                     false
+rofi.show-match:                     false
 ! "New style theme file" Set from: Default
- rofi.theme:                          ~/.config/rofi/theme
+rofi.theme:                          ~/.config/rofi/theme
 ! "Color scheme for normal row" Set from: Default
 ! rofi.color-normal:                   
 ! "Color scheme for urgent row" Set from: Default
@@ -121,7 +121,7 @@
 ! "The display name of this browser" Set from: Default
 ! rofi.display-windowcd:               
 ! "The display name of this browser" Set from: Default
- rofi.display-run:                    Run:
+rofi.display-run:                    
 ! "The display name of this browser" Set from: Default
 ! rofi.display-ssh:                    
 ! "The display name of this browser" Set from: Default
@@ -137,13 +137,13 @@
 ! "Clear input line" Set from: Default
 ! rofi.kb-clear-line:                  Control+w
 ! "Beginning of line" Set from: Default
- rofi.kb-move-front:                  Home
+rofi.kb-move-front:                  Home
 ! "End of line" Set from: Default
- rofi.kb-move-end:                    End
+rofi.kb-move-end:                    End
 ! "Move back one word" Set from: Default
- rofi.kb-move-word-back:              Control+Left
+rofi.kb-move-word-back:              Control+Left
 ! "Move forward one word" Set from: Default
- rofi.kb-move-word-forward:           Control+Right
+rofi.kb-move-word-forward:           Control+Right
 ! "Move back one char" Set from: Default
 ! rofi.kb-move-char-back:              Left,Control+b
 ! "Move forward one char" Set from: Default
@@ -187,9 +187,9 @@
 ! "Go to the next page" Set from: Default
 ! rofi.kb-page-next:                   Page_Down
 ! "Go to the first entry" Set from: Default
- rofi.kb-row-first:                   
+rofi.kb-row-first:                   
 ! "Go to the last entry" Set from: Default
- rofi.kb-row-last:                    
+rofi.kb-row-last:                    
 ! "Set selected item as input text" Set from: Default
 ! rofi.kb-row-select:                  Control+space
 ! "Take a screenshot of the rofi window" Set from: Default
