@@ -79,7 +79,9 @@ bindsym $mod+Shift+5 move container to workspace number $image
 bindsym $mod+Shift+6 move container to workspace number $chat
 bindsym $mod+Shift+7 move container to workspace number $music
 
-# Reload, restart, exit
+bindsym $mod+s focus mode_toggle
+
+# Restart, exit
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id i3-msg exit
 
@@ -171,7 +173,7 @@ smart_borders on
 
 # Gaps
 gaps inner 15
-gaps outer -10
+gaps outer 0
 
 # Blue light filter
 exec --no-startup-id redshift -l 52.520008:13.404954

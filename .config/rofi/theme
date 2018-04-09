@@ -1,6 +1,6 @@
 * {
 	spacing: 3px;
-	selected-background: #333333aa;
+	selected-background: #ffffff33;
 	background-color: transparent;
 	font: "Source Sans Pro 20";
 	text-color: #dddddd;
