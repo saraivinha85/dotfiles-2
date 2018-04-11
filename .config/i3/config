@@ -7,13 +7,13 @@ set $mail 4
 set $image 5
 set $chat 6
 set $music 7
-set $dark #333333
-set $darker #666666
-set $brighter #aaaaaa
-set $bright #dddddd
+set $darkest #222222
+set $dark #555555
+set $bright #bbbbbb
+set $brightest #eeeeee
+set $transparent_dark #000000aa
 set $bar_height 50
-set $font_size 12
-set $bar_color #000000aa
+set $font_size 13
 
 # Font
 font pango:Source Sans Pro Semibold $font_size
@@ -28,7 +28,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+q kill
 
 # Dmenu
-bindsym $mod+d exec --no-startup-id rofi -config .config/rofi/config -show run
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 # Focus
 bindsym $mod+Left focus left
@@ -103,11 +103,11 @@ bar {
 	mode dock
 	position top
 	colors {
-		background $bar_color
-		focused_workspace $bar_color $bar_color $bright
-		inactive_workspace $bar_color $bar_color $brighter
-		urgent_workspace $bar_color $bar_color $brighter
-		separator $bright
+		background $transparent_dark
+		focused_workspace $transparent_dark $transparent_dark $brightest
+		inactive_workspace $transparent_dark $transparent_dark $bright
+		urgent_workspace $transparent_dark $transparent_dark $bright
+		separator $brightest
 	}
 	font pango:Source Sans Pro Semibold $font_size
 	separator_symbol ""
@@ -122,7 +122,7 @@ bar {
 	id 1
 	position bottom
 	mode hide
-	colors { background $dark }
+	colors { background $darkest }
 	height $bar_height
 	tray_padding 3
 	binding_mode_indicator yes
@@ -148,11 +148,11 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -5% &&
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle && pkill -RTMIN+1 i3blocks
 
 # Colors (Border, Background, Text, Indicator, Child border)
-client.focused			$bright $dark $bright $dark $bright
-client.focused_inactive		$brighter $dark $bright $dark $brighter
-client.unfocused		$darker $dark $bright $dark $darker
-client.urgent			$darker $dark $bright $dark $darker
-client.background		$dark
+client.focused			$brightest $darkest $brightest $darkest $brightest
+client.focused_inactive		$bright $darkest $brightest $darkest $bright
+client.unfocused		$dark $darkest $brightest $darkest $dark
+client.urgent			$dark $darkest $brightest $darkest $dark
+client.background		$darkest
 
 # Workspace assignments
 assign [class="Atom"] $code
