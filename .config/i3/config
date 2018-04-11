@@ -132,8 +132,8 @@ bar {
 bindsym $mod+t bar mode toggle 1
 
 # Screenshot
-bindsym $mod+p exec --no-startup-id scrot /tmp/screen.png -q 100 && xclip -i /tmp/screen.png -t image/png -selection CLIPBOARD && rm /tmp/screen.png && notify-send "Screenshot taken"
-bindsym $mod+Shift+p exec --no-startup-id scrot ~/Images/screenshot.png -q 100 && notify-send "Screenshot saved"
+bindsym Print exec --no-startup-id scrot /tmp/screen.png -q 100 && xclip -i /tmp/screen.png -t image/png -selection CLIPBOARD && rm /tmp/screen.png && notify-send "Screenshot taken"
+bindsym Shift+Print exec --no-startup-id scrot ~/Images/screenshot.png -q 100 && notify-send "Screenshot saved"
 
 # Wallpaper
 exec_always --no-startup-id ~/Scripts/random_wallpaper.sh
