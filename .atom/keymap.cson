@@ -52,3 +52,4 @@
 	"ctrl-down": "ctrl-dir-scroll:scroll-down"
 	"ctrl-f": "find-and-replace:toggle"
 	"ctrl-d": "find-and-replace:select-next"
+	"ctrl-shift-d": "find-and-replace:select-previous"
