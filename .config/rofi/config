@@ -43,9 +43,9 @@ rofi.fixed-num-lines:                true
 ! "Desktop entry fields to match in drun" Set from: Default
 ! rofi.drun-match-fields:              name,generic,exec,categories
 ! "Disable history in run/ssh" Set from: Default
-! rofi.disable-history:                false
+rofi.disable-history:                true
 ! "Use sorting" Set from: Default
-! rofi.sort:                           false
+rofi.sort:                           false
 ! "Use levenshtein sorting also for fuzzy matching" Set from: Default
 ! rofi.levenshtein-sort:               false
 ! "Set case-sensitivity" Set from: Default
@@ -111,7 +111,7 @@ rofi.theme:                          ~/.config/rofi/theme
 ! "Color scheme window" Set from: Default
 ! rofi.color-window:                   
 ! "Max history size (WARNING: can cause slowdowns when set to high)." Set from: Default
-! rofi.max-history-size:               25
+rofi.max-history-size:               0
 ! "Hide the prefix mode prefix on the combi view." Set from: Default
 ! rofi.combi-hide-mode-prefix:         false
 ! "Pidfile location" Set from: Default
