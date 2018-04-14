@@ -3,9 +3,11 @@
 rm -r .config
 rm -r Scripts
 rm -r .atom
+rm -r XorgConf
 
 mkdir .config
 mkdir .atom
+mkdir XorgConf
 
 cp ~/.bashrc .
 cp ~/.bash_profile .
@@ -24,3 +26,5 @@ cp -r ~/.config/alacritty .config/
 cp -r ~/.config/rofi .config/
 
 cp -r ~/Scripts .
+
+cp /etc/X11/xorg.conf.d/* XorgConf/
