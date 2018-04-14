@@ -1,3 +1,5 @@
+#!/bin/sh
+
 rm -r .config
 rm -r Scripts
 rm -r .atom
