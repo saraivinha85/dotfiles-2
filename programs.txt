@@ -5,11 +5,11 @@ Packages:
 	feh
 	font-awesome
 	font-sourcecodepro
+	gscreenshot
 	i3-gaps
 	i3blocks
 	redshift
 	rofi
-	scrot
 	source-sans-pro
 	vim
 	xclip
