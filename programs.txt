@@ -1,18 +1,19 @@
-compton
-curl
-dunst
-feh
-font-awesome
-font-sourcecodepro
-i3-gaps
-i3blocks
-redshift
-rofi
-rustup
-scrot
-source-sans-pro
-vim
-xclip
-xorg
+Packages:
+	compton
+	curl
+	dunst
+	feh
+	font-awesome
+	font-sourcecodepro
+	i3-gaps
+	i3blocks
+	redshift
+	rofi
+	scrot
+	source-sans-pro
+	vim
+	xclip
+	xorg
 
-alacritty
+Cargo:
+	alacritty

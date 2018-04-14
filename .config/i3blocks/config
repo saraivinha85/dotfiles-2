@@ -5,15 +5,16 @@ markup=none
 command=echo " "
 interval=once
 
-#[song]
-#label=
-#command=~/Scripts/blocks/spotify
-#interval=5
-
 [user]
 label= 
 command=echo $USER
 interval=once
+
+[song]
+label=
+command=~/Scripts/blocks/getify
+interval=persist
+color=#24CF5F
 
 #[wireless]
 #label=

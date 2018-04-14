@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 BATTERY=$(acpi | awk '{print $4+0}')
 

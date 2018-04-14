@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 INFO=$(amixer -D pulse get Master | tail -n 1)
 MUTED=$(echo $INFO | awk '{print $6}')
 

@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
-WEATHER=$(curl --silent -H "Accept-Language: en" -m 0.5 "wttr.in/Hamburg" | head -n 7 | tail -n 5)
+WEATHER=$(curl -sNm 0.5 "wttr.in/Hamburg" | head -n 7 | tail -n 5)
 
 if [ ! -z "$WEATHER" ]
 then
