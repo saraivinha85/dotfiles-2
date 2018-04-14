@@ -17,3 +17,6 @@ Packages:
 
 Cargo:
 	alacritty
+
+Custom:
+	getify

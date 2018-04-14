@@ -1,1 +1,1 @@
-feh --scale-down --auto-zoom --image-bg white
+feh --scale-down --auto-zoom --image-bg white --force-aliasing
