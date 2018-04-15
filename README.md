@@ -1,3 +1,5 @@
+# Void / i3-gaps dotfiles
+
 ### Packages:
 * compton
 * curl
@@ -29,3 +31,5 @@
 
 ### Mouse:
 * BMZ
+
+![Screenshot](screenshot.png)
