@@ -4,6 +4,7 @@ rm -r .config
 rm -r Scripts
 rm -r .atom
 rm -r XorgConf
+rm -r .vim
 
 mkdir .config
 mkdir .atom
@@ -13,6 +14,7 @@ cp ~/.bashrc .
 cp ~/.bash_profile .
 cp ~/.Xmodmap .
 cp ~/.xinitrc .
+cp ~/.vimrc .
 cp ~/.config/compton.conf .config/
 cp ~/.atom/config.cson .atom/
 cp ~/.atom/keymap.cson .atom/
@@ -26,5 +28,6 @@ cp -r ~/.config/alacritty .config/
 cp -r ~/.config/rofi .config/
 
 cp -r ~/Scripts .
+cp -r ~/.vim .
 
 cp /etc/X11/xorg.conf.d/* XorgConf/
