@@ -32,4 +32,4 @@
 ### Mouse:
 * BMZ
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot.jpg)
