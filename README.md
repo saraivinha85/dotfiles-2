@@ -71,3 +71,13 @@ Default modifier is the windows key
 |Shift + Print|Save a screenshot to `~/Images/screenshot.png`|
 |Mod + Shift + R|Reload i3|
 |Mod + Shift + E|Exit i3|
+|Mod + T|Open tray bar|
+|Mod + Mouse drag|Move floating window|
+|Mod + Right mouse drag|Resize floating window|
+|Mod + R|Enter resize mode|
+
+##### Resize mode
+|Key|Function|
+|---|---|
+|Arrow key|Resize window|
+|Escape|Exit resize mode|
