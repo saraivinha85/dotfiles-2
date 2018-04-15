@@ -31,3 +31,5 @@ cp -r ~/Scripts .
 cp -r ~/.vim .
 
 cp /etc/X11/xorg.conf.d/* XorgConf/
+
+rm -rf .vim/bundle

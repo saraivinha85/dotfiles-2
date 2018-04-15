@@ -1,5 +1,12 @@
 #!/bin/sh
 
+case $BLOCK_BUTTON in
+	1) ~/Scripts/volume_toggle.sh ;;
+	4) ~/Scripts/volume_up.sh ;;
+	5) ~/Scripts/volume_down.sh ;;
+	*) ;;
+esac
+
 INFO=$(amixer -D pulse get Master | tail -n 1)
 MUTED=$(echo $INFO | awk '{print $6}')
 
