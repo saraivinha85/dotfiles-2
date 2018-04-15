@@ -2,18 +2,18 @@
 
 BATTERY=$(acpi | awk '{print $4+0}')
 
-echo "${BATTERY}%"
+echo $BATTERY%
 echo
 
 if [ "$BATTERY" -lt 25 ]
 then
-	echo "#FF5533"
+	echo "#F92672"
 elif [ "$BATTERY" -lt 50 ]
 then
-	echo "#FFBB33"
+	echo "#FD971F"
 elif [ "$BATTERY" -lt 75 ]
 then
 	echo "#FFFF33"
 else
-	echo "#BBFF33"
+	echo "#A6E22E"
 fi

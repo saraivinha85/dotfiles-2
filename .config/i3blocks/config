@@ -14,7 +14,7 @@ interval=once
 label=
 command=~/Scripts/blocks/getify
 interval=persist
-color=#24CF5F
+color=#A6E22E
 
 #[wireless]
 #label=
@@ -26,14 +26,14 @@ label=
 command=~/Scripts/blocks/volume
 interval=once
 signal=1
-color=#33BBFF
+color=#43A4F3
 
 #[brightness]
 #label= 
 #command=light -r
 #interval=once
 #signal=2
-#color=#33BBFF
+#color=#43A4F3
 
 #[battery]
 #label= 
