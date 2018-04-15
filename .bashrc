@@ -4,7 +4,9 @@ PS1="\W \$ "
 
 alias ls="els --els-icons=fontawesome"
 
-WEATHER=$(~/Scripts/get_weather.sh)
+(cat ~/.cache/wal/sequences &)
+
+WEATHER=$(~/Scripts/weather.sh)
 
 if [ ! -z "$WEATHER" ]
 then
@@ -12,4 +14,3 @@ then
 	echo "$WEATHER"
 	echo
 fi
-
