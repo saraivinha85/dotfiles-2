@@ -10,7 +10,6 @@
 * gscreenshot
 * i3-gaps
 * i3blocks
-* pywal
 * redshift
 * rofi
 * source-sans-pro
