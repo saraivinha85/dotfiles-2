@@ -139,7 +139,7 @@ exec_always --no-startup-id ~/Scripts/random_wallpaper.sh
 
 # Brightness
 # bindsym XF86MonBrightnessUp exec --no-startup-id ~/Scripts/brightness_up.sh
-# bindsym XF86MonBrightnessDown exec --no-startup-id ~/Scripts/brightness_up.sh
+# bindsym XF86MonBrightnessDown exec --no-startup-id ~/Scripts/brightness_down.sh
 
 # Audio
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/Scripts/volume_up.sh
