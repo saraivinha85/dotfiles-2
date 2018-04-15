@@ -61,7 +61,7 @@
   editor:
     atomicSoftTabs: false
     fontFamily: "Source Code Pro"
-    fontSize: 15
+    fontSize: 13
     nonWordCharacters: "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-…_ "
     preferredLineLength: 100000000000000000
     scrollPastEnd: true
